@@ -26,9 +26,13 @@ chyba ze biblioteka w /usr/include/
 
 ## Kompilacja narzędzi
 
+Narzędzie do konwersji danych z .asc do .xyz:
+
 ```
 g++ asc2xyz.cpp -o asc2xyz -O3
 ```
+
+Narzędzie do budowy modelu TIN:
 
 ```
 cmake -DCGAL_DIR=library/CGAL-5.6 -DBOOST_ROOT=library/boost_1_85_0 -DEIGEN3_INCLUDE_DIR=library/eigen-3.4.0 -DCMAKE_BUILD_TYPE=Release -S . -B build
