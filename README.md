@@ -12,17 +12,25 @@ Statystyki policzone dla fragmentów `78766_1433420_N-34-63-C-c-3-1` (Malbork)
 
 ## Przygotowanie środowiska
 
+Wymagana jest instalacja biblioteki Eigen:
+
 ```
 sudo apt install libeigen3-dev
 ```
 
+Biblioteka trafi do jednego z dwóch folderów: `/usr/local/include` lub `/usr/include/`. Możliwe jest sprawdzenie z wykorzystaniem przykładowego testu:
+
 ```
-cd /usr/local/include
+ls /usr/local/include | grep eigen
+```
+
+Jeżeli wyświetlona zostanie informacja zwrotna, to znaczy że patrzymy na dobry folder. Następnie należy utworzyć symlinki do Eigena:
+
+```
+cd <folder z biblioteką Eigen>
 sudo ln -sf eigen3/Eigen Eigen
 sudo ln -sf eigen3/unsupported unsupported
 ```
-
-chyba ze biblioteka w /usr/include/
 
 ## Kompilacja narzędzi
 
