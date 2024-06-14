@@ -7,3 +7,13 @@ Statystyki policzone dla fragmentów `78766_1433420_N-34-63-C-c-3-1` (Malbork)
   <td width="33%"><img src="https://github.com/s3gf4u17/3dgeolab-GridToTin/assets/86662946/1e598fe2-5d5c-4aa6-8ae3-4176fc37adbc"/></td>
   </tr>
 </table>
+
+## Spis treści
+
+## Przygotowanie środowiska
+
+## Kompilacja narzędzi
+
+## Wykorzystanie narzędzi
+
+## Licencje
