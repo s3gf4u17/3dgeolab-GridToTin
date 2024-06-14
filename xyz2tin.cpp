@@ -23,10 +23,10 @@ using Projection_traits = CGAL::Projection_traits_xy_3<Kernel>;
 using TIN = CGAL::Delaunay_triangulation_2<Projection_traits>;
 
 int main(int argc, char **argv) {
-    float COSINE_MAX_ANGLE=std::stof(argv[1]); // 0.98
-    float MAX_DISTANCE=std::stof(argv[2]); // 0.011
+    float COSINE_MAX_ANGLE=std::stof(argv[3]); // 0.98
+    float MAX_DISTANCE=std::stof(argv[4]); // 0.011
     auto t_start = std::chrono::high_resolution_clock::now();
-    std::ifstream input("out.xyz");
+    std::ifstream input(argv[1]);
     CGAL::Point_set_3<Point_3> points;
     input >> points;
     std::cerr << points.size() << " points read" << std::endl;
@@ -75,7 +75,7 @@ int main(int argc, char **argv) {
     );
     std::cerr << "remeshed v" << finalmesh.number_of_vertices() << " f" << finalmesh.number_of_faces() << std::endl;
 
-    std::ofstream result("result.obj");
+    std::ofstream result(argv[2]);
     CGAL::IO::write_OBJ(result,finalmesh,CGAL::parameters::stream_precision(6));
     result.flush();
     result.close();
