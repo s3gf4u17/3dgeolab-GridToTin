@@ -66,3 +66,7 @@ Gdzie COSINE_MAX_ANGLE i MAX_DISTANCE to wartości float z przedziału <0.0;1.0>
 ```
 
 ## Licencje
+
+### CGAL
+
+Licencję biblioteki można podejrzeć [tutaj](https://www.cgal.org/license.html)
