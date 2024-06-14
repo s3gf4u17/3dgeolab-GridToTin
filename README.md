@@ -49,6 +49,12 @@ cd build && make -j8
 
 ## Wykorzystanie narzędzi
 
+Jeżeli pobrano program z Github releases to należy odblokować uruchamianie:
+
+```
+chmod a+wrx asc2xyz xyz2tin
+```
+
 Na początku należy wykorzystać narzędzie `asc2xyz`, żeby dane grid z formatu .asc przenieść do chmury punktów w formacie .xyz. Schemat wywołania programu:
 
 ```bash
