@@ -34,21 +34,6 @@ sudo ln -sf eigen3/unsupported unsupported
 
 ## Kompilacja narzędzi
 
-Narzędzie do konwersji danych z .asc do .xyz:
-
-```
-g++ asc2xyz.cpp -o asc2xyz -O3
-```
-
-Narzędzie do budowy modelu TIN:
-
-```
-cmake -DCGAL_DIR=library/CGAL-5.6 -DBOOST_ROOT=library/boost_1_85_0 -DEIGEN3_INCLUDE_DIR=library/eigen-3.4.0 -DCMAKE_BUILD_TYPE=Release -S . -B build
-cd build && make -j8
-```
-
-## Wykorzystanie narzędzi
-
 Program korzysta z zewnętrznych bibliotek. W folderze z kodem źródłowym należy utworzyć nowy folder `library`. Następnie pobrać odpowiednie wersje każdej z bibliotek: [boost-1.85.0](https://boostorg.jfrog.io/artifactory/main/release/1.85.0/source/boost_1_85_0.tar.gz), [CGAL-5.6](https://github.com/CGAL/cgal/releases/download/v5.6/CGAL-5.6-library.tar.xz) i [eigen-3.4.0](https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz). Po wypakowaniu, drzewo plików powinno wyglądać mniej więcej tak:
 
 ```
@@ -87,6 +72,21 @@ Ostatecznie, skompilować sam program:
 ```
 cd build && make -j8
 ```
+
+Narzędzie do konwersji danych z .asc do .xyz:
+
+```
+g++ asc2xyz.cpp -o asc2xyz -O3
+```
+
+Narzędzie do budowy modelu TIN:
+
+```
+cmake -DCGAL_DIR=library/CGAL-5.6 -DBOOST_ROOT=library/boost_1_85_0 -DEIGEN3_INCLUDE_DIR=library/eigen-3.4.0 -DCMAKE_BUILD_TYPE=Release -S . -B build
+cd build && make -j8
+```
+
+## Wykorzystanie narzędzi
 
 Jeżeli pobrano program z Github releases to należy odblokować uruchamianie:
 
