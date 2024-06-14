@@ -52,13 +52,13 @@ cd build && make -j8
 Na początku należy wykorzystać narzędzie `asc2xyz`, żeby dane grid z formatu .asc przenieść do chmury punktów w formacie .xyz. Schemat wywołania programu:
 
 ```bash
-asc2xyz <input> <output>
+asc2xyz <input> <output> <przyciecie y> <przyciecie x>
 ```
 
-Przykładowo:
+Przyciecie Y (int) to wiersz do którego zostaną zapisane punkty. Przeciecie X (int) to numer kolumny do tego samego celu. Przykładowo:
 
 ```
-./asc2xyz data/78766_1433420_N-34-63-C-c-3-1.asc cloud.xyz
+./asc2xyz data/78766_1433420_N-34-63-C-c-3-1.asc cloud.xyz 1000 1000
 ```
 
 Następnie można utworzyć model TIN z wykorzystaniem `xyz2tin`:

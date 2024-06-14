@@ -3,15 +3,14 @@
 #include <sstream>
 #include <string>
 
-#define BREAKY 1000
-#define BREAKX 1000
-
 int main(int argc, char **argv) {
     int COLS,ROWS;
     float XLLCENTER,YLLCENTER,CELLSIZE;
     std::string NODATAVALUE;
     std::ifstream input(argv[1]);
     std::ofstream output(argv[2]);
+    int BREAKY = std::stoi(argv[3]);
+    int BREAKX = std::stoi(argv[4]);
     std::string line;
     int rowcounter=0;
     while(std::getline(input,line)) {
