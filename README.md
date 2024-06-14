@@ -12,7 +12,28 @@ Statystyki policzone dla fragmentów `78766_1433420_N-34-63-C-c-3-1` (Malbork)
 
 ## Przygotowanie środowiska
 
+```
+sudo apt install libeigen3-dev
+```
+
+```
+cd /usr/local/include
+sudo ln -sf eigen3/Eigen Eigen
+sudo ln -sf eigen3/unsupported unsupported
+```
+
+chyba ze biblioteka w /usr/include/
+
 ## Kompilacja narzędzi
+
+```
+g++ asc2xyz.cpp -o asc2xyz -O3
+```
+
+```
+cmake -DCGAL_DIR=library/CGAL-5.6 -DBOOST_ROOT=library/boost_1_85_0 -DEIGEN3_INCLUDE_DIR=library/eigen-3.4.0 -DCMAKE_BUILD_TYPE=Release -S . -B build
+cd build && make -j8
+```
 
 ## Wykorzystanie narzędzi
 
