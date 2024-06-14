@@ -37,4 +37,28 @@ cd build && make -j8
 
 ## Wykorzystanie narzędzi
 
+Na początku należy wykorzystać narzędzie `asc2xyz`, żeby dane grid z formatu .asc przenieść do chmury punktów w formacie .xyz. Schemat wywołania programu:
+
+```bash
+asc2xyz <input> <output>
+```
+
+Przykładowo:
+
+```
+./asc2xyz data/78766_1433420_N-34-63-C-c-3-1.asc cloud.xyz
+```
+
+Następnie można utworzyć model TIN z wykorzystaniem `xyz2tin`:
+
+```
+./xyz2tin <input> <output> <COSINE_MAX_ANGLE> <MAX_DISTANCE>
+```
+
+Gdzie COSINE_MAX_ANGLE i MAX_DISTANCE to wartości float z przedziału <0.0;1.0>. Przykład:
+
+```
+./xyz2tin cloud.xyz tin.obj 0.98 0.5
+```
+
 ## Licencje
